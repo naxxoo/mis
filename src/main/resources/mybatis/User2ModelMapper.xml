@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.User2ModelMapper">
+	<resultMap id="BaseResultMap" type="com.ks.mis.model.User2Model">
+		<result column="id" property="id" jdbcType="DECIMAL" />
+		<result column="account" property="account" jdbcType="VARCHAR" />
+		<result column="cardnumber" property="cardnumber" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="VARCHAR" />
+		<result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+		<result column="weixin" property="weixin" jdbcType="VARCHAR" />
+		<result column="ip" property="ip" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="queryAll" resultMap="BaseResultMap">
+		SELECT * from h_user2
+	</select>
+	
+	
+</mapper>
